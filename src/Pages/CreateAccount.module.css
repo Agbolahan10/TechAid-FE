@@ -2,6 +2,7 @@
     display: flex;
     height: 100vh;
     align-items: center;
+    justify-content: space-between;
     background-color: #fff;
   }
   
@@ -28,6 +29,8 @@
     justify-content: center;
     padding: 20px;
     background: transparent;
+    margin-left: auto;
+    margin-right: 200px;
   }
 
   
@@ -42,7 +45,7 @@
   
   .formGroup {
     margin-bottom: 15px;
-    padding: 20px;
+    padding: 10px;
   }
   
   .input {
@@ -81,4 +84,51 @@
   .linkItem {
     text-decoration: none;
     color: #242CC3FB;
+  }
+
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      width: 100vw;
+    }
+  
+    .logoContainer {
+      flex: none;
+      height: auto;
+      padding: 20px;
+      justify-content: center;
+    }
+  
+    .logo {
+      max-width: 150px;
+    }
+  
+    .formContainer {
+      flex: none;
+      width: 100%;
+      padding: 10px; /* Reduced padding for small screens */
+    }
+  
+    .form {
+      padding: 15px; /* Reduced padding for small screens */
+    }
+  
+    .formGroup {
+      margin-bottom: 8px; /* Further reduced margin for small screens */
+    }
+  
+    .input {
+      padding: 6px; /* Smaller padding for inputs */
+      font-size: 12px; /* Smaller font size for inputs */
+    }
+  
+    .button {
+      padding: 8px; /* Smaller padding for button */
+      font-size: 12px; /* Smaller font size for button */
+    }
+  
+    .link {
+      font-size: 10px; /* Smaller font size for link */
+    }
   }

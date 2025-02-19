@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid #5252F1;
+  }
+  
+  .searchBox {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f9;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .searchIcon {
+    color: #007bff;
+    margin-right: 8px;
+  }
+  
+  .searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .userInfo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .userName {
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .userImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }

@@ -1,0 +1,62 @@
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: #1E0660;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logoContainer {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #34495e;
+  }
+  
+  .logo {
+    max-width: 60%;
+    height: auto;
+  }
+  
+  .nav {
+    flex: 1;
+    padding: 20px 0;
+  }
+  
+  .navItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .navItem:hover {
+    background-color: #34495e;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .footer {
+    padding: 20px;
+    border-top: 1px solid #34495e;
+  }
+  
+  .logoutButton {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: seagreen;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .logoutButton:hover {
+    background-color: #34495e;
+  }

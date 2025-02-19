@@ -30,7 +30,17 @@ const CreateAccount = () => {
         <h1>Create Account</h1>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.formGroup}>
-            <label className={styles.label}>Full Name</label>
+            <label className={styles.label}>First Name</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className={styles.input}
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label className={styles.label}>Last name</label>
             <input
               type="text"
               name="name"
@@ -84,4 +94,3 @@ const CreateAccount = () => {
 };
 
 export default CreateAccount;
-
