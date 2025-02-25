@@ -1,7 +1,7 @@
 .sidebar {
-    width: 220px;
+    width: 210px;
     height: 100vh;
-    background-color: #1E0660;
+    background-color: #001A87;
     color: white;
     display: flex;
     flex-direction: column;
@@ -9,27 +9,35 @@
   
   .logoContainer {
     padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #34495e;
+    text-align: left;
+    
+   
   }
   
   .logo {
     max-width: 60%;
     height: auto;
+    padding-top: 15px;
+    padding-bottom: 0;
   }
   
   .nav {
     flex: 1;
-    padding: 20px 0;
+    padding: 5px 0;
   }
   
   .navItem {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 20px;
     color: white;
     text-decoration: none;
     transition: background-color 0.3s;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
   }
   
   .navItem:hover {
@@ -42,7 +50,6 @@
   
   .footer {
     padding: 20px;
-    border-top: 1px solid #34495e;
   }
   
   .logoutButton {

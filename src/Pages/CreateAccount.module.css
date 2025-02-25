@@ -1,134 +1,145 @@
 .container {
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-  }
-  
-  .logoContainer {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #fff;
-    height: 100%;
-    padding-left: 100px;
-  }
-  
-  .logo {
-    max-width: 200px;
-    height: auto;
-  }
-  
-  .formContainer {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: transparent;
-    margin-left: auto;
-    margin-right: 200px;
-  }
+  display: flex;
+  flex-wrap: wrap;  /* Enables wrapping on smaller screens */
+  height: 100vh;
+  align-items: center;
+  justify-content: center;  /* Center on smaller screens */
+  background-color: #fff;
+  padding: 20px;
+}
 
-  
-  .form {
-    width: 700px;
-    background: transparent;
-    padding: 20px;
-    margin: auto;
-    border-radius: 8px;
-    box-shadow: none;
-  }
-  
-  .formGroup {
-    margin-bottom: 15px;
-    padding: 10px;
-  }
-  
-  .input {
-    border: none;
-    border-bottom: 2px solid #00000043;  
-    outline: none;  
-    font-size: 16px;
-    padding: 5px;
-    width: 100%;
-    background: transparent; 
-  }
+/* Logo Section */
+.logoContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Centers the logo on small screens */
+  align-items: center;
+  background-color: #fff;
+  height: auto;
+  padding: 100px;
+}
 
-  .label {
-    color: #00000043;
-  }
-  
-  .button {
-    width: 100%;
-    height: 70px;
-    padding: 10px;
-    background-color: #280D8B;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 16px;
-    margin-top: 35px;
-  }
-  
-  .link {
-    text-align: center;
-    margin-top: 10px;
-  }
+.logo {
+  max-width: 180px;  /* Adjusted for responsiveness */
+  height: auto;
+}
 
-  .linkItem {
-    text-decoration: none;
-    color: #242CC3FB;
-  }
+/* Form Section */
+.formContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: transparent;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: 300px;
+}
 
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .container {
+.form {
+  width: 150%; /* Adjusts to container size */
+  max-width: 700px; /* Limits width for readability */
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/* Form Inputs */
+.formGroup {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.input {
+  border: none;
+  border-bottom: 2px solid #00000032;  
+  outline: none;  
+  font-size: 16px;
+  padding: 5px;
+  width: 100%;
+  background: transparent; 
+}
+
+.label {
+  color: #0000003D;
+}
+
+/* Button */
+.button {
+  width: 100%;
+  max-width: 700px; 
+  height: 70px;
+  padding: 10px;
+  background-color: #001A87;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+/* Links */
+.link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.linkItem {
+  text-decoration: none;
+  color: #242CC3FB;
+}
+
+/* ----------- RESPONSIVENESS ----------- */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .container {
       flex-direction: column;
-      width: 100vw;
-    }
-  
-    .logoContainer {
-      flex: none;
-      height: auto;
-      padding: 20px;
-      justify-content: center;
-    }
-  
-    .logo {
-      max-width: 150px;
-    }
-  
-    .formContainer {
-      flex: none;
-      width: 100%;
-      padding: 10px; /* Reduced padding for small screens */
-    }
-  
-    .form {
-      padding: 15px; /* Reduced padding for small screens */
-    }
-  
-    .formGroup {
-      margin-bottom: 8px; /* Further reduced margin for small screens */
-    }
-  
-    .input {
-      padding: 6px; /* Smaller padding for inputs */
-      font-size: 12px; /* Smaller font size for inputs */
-    }
-  
-    .button {
-      padding: 8px; /* Smaller padding for button */
-      font-size: 12px; /* Smaller font size for button */
-    }
-  
-    .link {
-      font-size: 10px; /* Smaller font size for link */
-    }
+      height: auto; 
+      text-align: center;
   }
+
+  .logoContainer {
+      padding-left: 0;
+  }
+
+  .formContainer {
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .form {
+      max-width: 500px;
+  }
+
+  .button {
+      font-size: 18px;
+      height: 55px;
+  }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+  .form {
+      max-width: 100%;
+  }
+
+  .formGroup {
+      padding: 10px;
+  }
+
+  .button {
+      font-size: 16px;
+      height: 50px;
+  }
+
+  .logo {
+      max-width: 150px;
+  }
+}
