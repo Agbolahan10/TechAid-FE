@@ -6,21 +6,28 @@
   .mainContent {
     flex: 1;
     padding: 20px;
-    background-color: #f4f4f9;
+    background-color: #fff;
     overflow-y: auto;
   }
   
   .statusBoxes {
     display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
   }
   
   .statusBox {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 60px;
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
+    border-right: 1px solid #242323;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;
@@ -28,7 +35,7 @@
   }
   
   .statusBox.active {
-    background-color: #007bff;
+    background-color: #001A87;
     color: white;
   }
   
@@ -41,13 +48,14 @@
   }
   
   .statusLabel {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 500;
   }
   
   .statusCount {
     font-size: 24px;
-    margin-top: 10px;
+    font-weight: 500;
+    margin-top: 5px;
   }
   
   .ticketDetails {
@@ -55,17 +63,31 @@
   }
   
   .ticketBox {
-    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EDEDED;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin: 0 20px 20px 20px;
   }
   
   .noTickets {
     text-align: center;
-    font-size: 16px;
+    margin-top: 20%;
+    font-size: 24px;
     color: #666;
+  }
+
+  .styledBox {
+    display: flex;
+    align-items: center;
+    background-color: #D8DCDE;
+    border-radius: 8px;
+    padding: 5px;
+    height: 20px;
+    font-weight: 500;
   }
   
   /* Responsive Styles */

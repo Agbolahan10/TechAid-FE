@@ -11,10 +11,26 @@
   }
   
   .filterSection {
-    margin-top: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
   
   .dateFilter {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .calendarContainer {
+    display: inline-block;
+  }
+  
+  .calendar {
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -100,8 +116,14 @@
     .statBox.large {
       grid-column: span 1;
     }
+
+    .filterSection {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   
-    .dateFilter {
+    .dateFilter,
+    .calendar {
       width: 100%;
     }
   }

@@ -53,7 +53,7 @@ const TrackAndViewTickets = () => {
 
         return newTickets;
       });
-    }, 5000); // Update every 5 seconds
+    }, 300000); // Update every 60 seconds
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
@@ -72,37 +72,43 @@ const TrackAndViewTickets = () => {
             className={`${styles.statusBox} ${selectedStatus === 'unassigned' ? styles.active : ''}`}
             onClick={() => handleStatusClick('unassigned')}
           >
-            <span className={styles.statusLabel}>Unassigned Tickets</span>
             <span className={styles.statusCount}>{tickets.unassigned.length}</span>
+            <span className={styles.statusLabel}>Unassigned</span>
           </div>
           <div
             className={`${styles.statusBox} ${selectedStatus === 'assigned' ? styles.active : ''}`}
             onClick={() => handleStatusClick('assigned')}
           >
-            <span className={styles.statusLabel}>Assigned Tickets</span>
             <span className={styles.statusCount}>{tickets.assigned.length}</span>
+            <span className={styles.statusLabel}>Assigned</span>
           </div>
           <div
             className={`${styles.statusBox} ${selectedStatus === 'resolved' ? styles.active : ''}`}
             onClick={() => handleStatusClick('resolved')}
           >
-            <span className={styles.statusLabel}>Resolved Tickets</span>
             <span className={styles.statusCount}>{tickets.resolved.length}</span>
+            <span className={styles.statusLabel}>Resolved</span>
           </div>
         </div>
         <div className={styles.ticketDetails}>
           {selectedStatus ? (
             tickets[selectedStatus].map((ticket) => (
               <div key={ticket.id} className={styles.ticketBox}>
-                <p><strong>ID:</strong> {ticket.id}</p>
-                <p><strong>Description:</strong> {ticket.description}</p>
-                <p><strong>Status:</strong> {ticket.status}</p>
-                <p><strong>Type:</strong> {ticket.type}</p>
-                <p><strong>Date:</strong> {ticket.date}</p>
+                <p><strong>ID: {ticket.id}</strong></p>
+                <p>Description: {ticket.description}</p>
+                <div className={styles.styledBox}>
+                    <p>Status: {ticket.status}</p>
+                </div>
+                <div className={styles.styledBox}>
+                    <p>Type: {ticket.type}</p>
+                </div>
+                <div className={styles.styledBox}>
+                    <p>Date: {ticket.date}</p>
+                </div>
               </div>
             ))
           ) : (
-            <p className={styles.noTickets}>No tickets available, check back later.</p>
+            <p className={styles.noTickets}>No tickets available yet, check back later.</p>
           )}
         </div>
       </div>
