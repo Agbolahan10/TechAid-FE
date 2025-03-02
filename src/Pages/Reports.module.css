@@ -1,0 +1,170 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .mainContent {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Allow filters to wrap on smaller screens */
+  }
+  
+  .filter {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .calendar {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    flex: 1 1 auto; /* Allow calendar to grow and shrink */
+    min-width: 150px; /* Ensure calendar doesn't get too small */
+  }
+  
+  .charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .chartAndInfoRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .chartContainer {
+    flex: 1 1 40%; /* Allow charts to grow and shrink, but limit their base size */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 250px; /* Minimum width for smaller screens */
+    height: 300px; 
+  }
+
+  .chartBox {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .chartContainerTwo {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    width: 100%;
+    height: 400px;
+  }
+
+  
+  .legend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-right: 20px; 
+    justify-content: center; 
+  }
+  
+  .legendItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+  .colorBox {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+  }
+
+  .infoColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .infoContainer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow info boxes to wrap on smaller screens */
+  }
+  
+  .infoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+  }
+  
+  .infoBox h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .infoBox p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .filters {
+      flex-direction: column; /* Stack filters vertically on small screens */
+    }
+  
+    .charts {
+      flex-direction: column; /* Stack charts vertically on small screens */
+    }
+  
+    .infoContainer {
+      flex-direction: column; /* Stack info boxes vertically on small screens */
+    }
+  
+    .filter,
+    .calendar {
+      width: 100%; /* Full width for filters and calendar on small screens */
+    }
+
+    .chartBox, .chartContainerTwo {
+        width: 100%;
+      }
+  }

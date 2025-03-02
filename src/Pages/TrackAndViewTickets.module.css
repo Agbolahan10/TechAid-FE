@@ -46,6 +46,34 @@
   .statusBox.active:hover {
     background-color: #0056b3;
   }
+
+  .timeframe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .headings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 25px;
+  }
+
+  .headingsBold {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .dateFilter {
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: #F6F5F5FB;
+    text-align: center;
+    padding: 8px;
+    margin-right: 25px;
+  }
   
   .statusLabel {
     font-size: 24px;

@@ -12,11 +12,18 @@
 .logoContainer {
   flex: 1;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: flex-start; /* Centers the logo on small screens */
   align-items: center;
   background-color: #fff;
   height: auto;
   padding: 100px;
+}
+
+.logoName {
+  color: #001A87;
+  text-shadow: 2px 2px 4px rgba(145 144 144 / 0.5);
 }
 
 .logo {

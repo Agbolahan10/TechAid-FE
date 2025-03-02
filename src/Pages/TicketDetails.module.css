@@ -1,0 +1,153 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .mainContent {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+  }
+  
+  .ticketContainer {
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 4px;
+    background-color: white;
+    margin-top: 20px;
+  }
+
+  .ticketMain {
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 4px;
+    background-color: white;
+    margin-bottom: 40px;
+  }
+  
+  .ticketHeader {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 20px;
+  }
+
+  .headerItemOne {
+    display: flex;
+    align-items: center;
+  }
+  
+  .headerItem {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #D8DCDE;
+    border-radius: 8px;
+    padding: 5px;
+  }
+  
+  .headerLabel {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .headerAll {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .textBox {
+    margin-bottom: 20px;
+  }
+  
+  .textBox.large {
+    min-height: 100px;
+  }
+  
+  .label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .metadataGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .metadataItem {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .metadataLabel {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .metadataValue {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .statusDropdown {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #D8DCDE;
+    font-size: 14px;
+    cursor: pointer;
+    width: 17%;
+    text-align: center;
+  }
+
+  .buttonBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .closeButton {
+    padding: 8px 16px;
+    background-color: #001A87;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 12%;
+    height: 50px;
+  }
+  
+  .closeButton:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .ticketHeader {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .metadataGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }

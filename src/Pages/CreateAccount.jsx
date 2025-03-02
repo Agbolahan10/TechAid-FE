@@ -6,16 +6,17 @@ import logo from '../assets/logo.jpeg';
 import styles from './CreateAccount.module.css';
 
 const CreateAccount = () => {
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('staff'); // Default role
+  const [phone, setNumber] = useState(''); 
   const { register } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (register(name, email, password, role)) {
+    if (register(firstName, lastName, email, password, phone)) {
       toast.success('Account created successfully!');
       navigate('/');
     } else {
@@ -28,6 +29,7 @@ const CreateAccount = () => {
       <Toaster />
       <div className={styles.logoContainer}>
         <img src={logo} alt="Optimus TechAid" className={styles.logo} />
+        <h2 className={styles.logoName}>OPTIMUS TECHAID</h2>
       </div>
       <div className={styles.formContainer}>
         <h1 className={styles.leftAlign}>Create Account</h1>
@@ -36,8 +38,8 @@ const CreateAccount = () => {
             <label className={styles.label}>First Name</label>
             <input
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
               className={styles.input}
               required
             />
@@ -46,8 +48,8 @@ const CreateAccount = () => {
             <label className={styles.label}>Last Name</label>
             <input
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               className={styles.input}
               required
             />
@@ -73,17 +75,14 @@ const CreateAccount = () => {
             />
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.label}>Role</label>
-            <select
-              value={role}
-              onChange={(e) => setRole(e.target.value)}
+          <label className={styles.label}>Phone No</label>
+            <input
+              type="number"
+              value={phone}
+              onChange={(e) => setNumber(e.target.value)}
               className={styles.input}
               required
-            >
-              <option value="it">IT Staff</option>
-              <option value="staff">Other Staff</option>
-              <option value="admin">Admin</option>
-            </select>
+            />
           </div>
           <button type="submit" className={styles.button}>
             Create Account

@@ -7,7 +7,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 
-const ITDashboard = () => {
+const StaffDashboard = () => {
   const { user } = useContext(AuthContext);
   const [dateFilter, setDateFilter] = useState('all-time'); // Default date filter
   const [selectedDate, setSelectedDate] = useState(null);
@@ -102,4 +102,4 @@ const ITDashboard = () => {
   );
 };
 
-export default ITDashboard;
+export default StaffDashboard;
